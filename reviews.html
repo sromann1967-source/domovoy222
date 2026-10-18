@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы — Домовой</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-content { padding: 150px 0 100px; max-width: 900px; margin: 0 auto; min-height: 100vh; }
+        .back-link { display: inline-block; margin-bottom: 30px; color: var(--blue); text-decoration: none; font-weight: 600; }
+        .back-link:hover { text-decoration: underline; }
+        .page-content h1 { font-size: 48px; margin-bottom: 40px; text-transform: uppercase; text-align: center; }
+        .review-list { display: flex; flex-direction: column; gap: 30px; margin-top: 40px; }
+        .review-item { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .review-stars { color: var(--orange); font-size: 20px; margin-bottom: 15px; }
+        .review-text { font-size: 16px; font-style: italic; margin-bottom: 20px; line-height: 1.6; }
+        .review-author { font-weight: 700; font-size: 18px; }
+        .review-house { font-size: 14px; color: var(--gray); margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container page-content">
+        <a href="index.html" class="back-link">← Вернуться на главную</a>
+        <h1>Отзывы наших клиентов</h1>
+        <div class="review-list">
+            <div class="review-item">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">Построили дом за 4 месяца. Очень довольны качеством работы и отношением к клиенту. Все четко по договору, без скрытых платежей.</p>
+                <div class="review-author">Алексей Иванов</div>
+                <div class="review-house">Дом 120 м², кирпич</div>
+            </div>
+            <div class="review-item">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">Спасибо за профессионализм! Помогли с проектом, подобрали материалы. Стройка шла по графику, мы приезжали и видели прогресс каждую неделю.</p>
+                <div class="review-author">Елена Смирнова</div>
+                <div class="review-house">Дом 150 м², газоблок</div>
+            </div>
+            <div class="review-item">
+                <div class="review-stars">★★★★☆</div>
+                <p class="review-text">Хорошая компания. Немного затянули с кровлей из-за погоды, но в целом все отлично. Дом теплый, зимой топим мало.</p>
+                <div class="review-author">Дмитрий К.</div>
+                <div class="review-house">Дом 90 м², брус</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
