@@ -70,7 +70,16 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 500; line-height: 1
 .btn-submit-hero:hover { background: var(--orange-hover); transform: translateY(-2px); box-shadow: 0 6px 15px rgba(255, 140, 66, 0.5); }
 
 /* ============ БЛОКИ С КНОПКОЙ ============ */
-.action-block { padding: 100px 0; display: flex; align-items: center; min-height: 60vh; background-size: cover; background-position: center; position: relative; }
+.action-block { 
+    padding: 100px 0; 
+    display: flex; 
+    align-items: center; 
+    min-height: 60vh; 
+    background-size: cover; 
+    background-position: center; 
+    position: relative; 
+    color: var(--white); /* БЕЛЫЙ ТЕКСТ ПО УМОЛЧАНИЮ */
+}
 .bg-dark { background-color: #1a2530; color: var(--white); }
 .bg-white { background-color: var(--white); color: var(--black); }
 
@@ -80,7 +89,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 500; line-height: 1
 
 #about { background-image: url('images/about-bg.jpg'); }
 #about .action-overlay { position: absolute; inset: 0; background: rgba(255, 255, 255, 0.95); z-index: 1; }
-#about .action-container { position: relative; z-index: 2; }
+#about .action-container { position: relative; z-index: 2; color: var(--black); /* ЧЕРНЫЙ ТЕКСТ ДЛЯ СВЕТЛОГО БЛОКА */ }
 
 #process { background-image: url('images/process-bg.jpg'); }
 #process .action-overlay { position: absolute; inset: 0; background: rgba(17, 42, 72, 0.85); z-index: 1; }
@@ -88,7 +97,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 500; line-height: 1
 
 #projects { background-image: url('images/projects-bg.jpg'); }
 #projects .action-overlay { position: absolute; inset: 0; background: rgba(255, 255, 255, 0.95); z-index: 1; }
-#projects .action-container { position: relative; z-index: 2; }
+#projects .action-container { position: relative; z-index: 2; color: var(--black); /* ЧЕРНЫЙ ТЕКСТ ДЛЯ СВЕТЛОГО БЛОКА */ }
 
 #reviews { background-image: url('images/reviews-bg.jpg'); }
 #reviews .action-overlay { position: absolute; inset: 0; background: rgba(17, 42, 72, 0.9); z-index: 1; }
@@ -182,8 +191,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 500; line-height: 1
     .footer-grid { 
         flex-direction: column; 
         gap: 40px; 
-        text-align: center; /* Центрируем текст */
-        align-items: center; /* Центрируем элементы */
+        text-align: center; 
+        align-items: center; 
     }
     .footer-brand { 
         display: flex; 
@@ -191,7 +200,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 500; line-height: 1
         align-items: center; 
     }
     .footer-contacts { 
-        text-align: center; /* Центрируем контакты */
+        text-align: center; 
     }
     .footer-developer { 
         display: flex; 
