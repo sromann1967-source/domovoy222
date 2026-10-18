@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домовой — Строительство домов в Воронеже</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ШАПКА -->
+<header class="header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Домовой" class="logo-img">
+        </a>
+        <nav class="nav">
+            <a href="#quiz" class="nav-link">Подарок</a>
+            <a href="#about" class="nav-link">О нас</a>
+            <a href="#process" class="nav-link">Этапы</a>
+            <a href="#projects" class="nav-link">Проекты</a>
+            <a href="#reviews" class="nav-link">Отзывы</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+        </nav>
+        <div class="header-right">
+            <a href="tel:+79204208262" class="header-phone">+7 (920) 420-82-62</a>
+            <button class="btn-order open-modal">Заказать звонок</button>
+            <button class="burger" id="burger"><span></span><span></span></button>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#quiz" class="nav-link">Подарок</a>
+        <a href="#about" class="nav-link">О нас</a>
+        <a href="#process" class="nav-link">Этапы</a>
+        <a href="#projects" class="nav-link">Проекты</a>
+        <a href="#reviews" class="nav-link">Отзывы</a>
+        <a href="#contacts" class="nav-link">Контакты</a>
+        <a href="tel:+79204208262" class="mobile-phone">+7 (920) 420-82-62</a>
+    </div>
+</header>
+
+<!-- БЛОК 1: HERO -->
+<section class="hero" id="hero">
+    <div class="hero-bg" style="background-image: url('images/hero-house.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content-wrapper">
+        <div class="hero-left">
+            <img src="images/logo.png" alt="Домовой" class="hero-big-logo">
+        </div>
+        <div class="hero-right">
+            <div class="hero-form-card">
+                <h3>Заказать звонок</h3>
+                <p>Оставьте заявку, и мы перезвоним вам в течение 15 минут.</p>
+                <form action="#" class="hero-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="Ваш телефон" required>
+                    <button type="submit" class="btn-submit-hero">Заказать звонок</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК 2: ОПРОС (id="quiz") -->
+<section class="action-block" id="quiz">
+    <div class="action-overlay"></div>
+    <div class="container action-container">
+        <div class="action-left">
+            <h2 class="action-title">Пройдите опрос<br>и получите смету<br><span class="italic-gold">бесплатно</span></h2>
+            <p class="action-subtitle">Ответьте на 8 простых вопросов, и мы подготовим для вас индивидуальный расчет стоимости строительства.</p>
+        </div>
+        <div class="action-right">
+            <div class="arrow-btn-wrapper">
+                <span class="arrow-text">Нажмите сюда</span>
+                <a href="quiz.html" class="arrow-btn">→</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК 3: О КОМПАНИИ (id="about") -->
+<section class="action-block" id="about">
+    <div class="action-overlay"></div>
+    <div class="container action-container">
+        <div class="action-left">
+            <span class="section-label">О КОМПАНИИ</span>
+            <h2 class="action-title text-dark">МЫ СТРОИМ<br>НАДЕЖНО И КРАСИВО</h2>
+        </div>
+        <div class="action-right">
+            <div class="arrow-btn-wrapper">
+                <span class="arrow-text text-dark">Нажмите сюда</span>
+                <a href="about.html" class="arrow-btn border-dark">→</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК 4: ЭТАПЫ (id="process") -->
+<section class="action-block" id="process">
+    <div class="action-overlay"></div>
+    <div class="container action-container">
+        <div class="action-left">
+            <h2 class="action-title">Начать работать<br>с нами просто</h2>
+        </div>
+        <div class="action-right">
+            <div class="arrow-btn-wrapper">
+                <span class="arrow-text">Нажмите сюда</span>
+                <a href="process.html" class="arrow-btn">→</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК 5: ПРОЕКТЫ (id="projects") -->
+<section class="action-block" id="projects">
+    <div class="action-overlay"></div>
+    <div class="container action-container">
+        <div class="action-left">
+            <h2 class="action-title text-dark">НАШИ ПРОЕКТЫ</h2>
+        </div>
+        <div class="action-right">
+            <div class="arrow-btn-wrapper">
+                <span class="arrow-text text-dark">Нажмите сюда</span>
+                <a href="projects.html" class="arrow-btn border-dark">→</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК 6: ОТЗЫВЫ (id="reviews") -->
+<section class="action-block" id="reviews">
+    <div class="action-overlay"></div>
+    <div class="container action-container">
+        <div class="action-left">
+            <h2 class="action-title">ОТЗЫВЫ<br>НАШИХ КЛИЕНТОВ</h2>
+        </div>
+        <div class="action-right">
+            <div class="arrow-btn-wrapper">
+                <span class="arrow-text">Нажмите сюда</span>
+                <a href="reviews.html" class="arrow-btn">→</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ПОДВАЛ -->
+<footer id="contacts" class="footer">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <p>Фундамент вашего спокойствия.</p>
+            <a href="privacy.html" class="privacy-link" target="_blank">Политика конфиденциальности</a>
+            
+            <div class="footer-developer">
+                <p>Сайт разработал <strong>Роман</strong></p>
+                <a href="https://t.me/pra_dead" target="_blank" class="tg-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.944 0C5.352 0 0 5.352 0 11.944C0 18.536 5.352 23.888 11.944 23.888C18.536 23.888 23.888 18.536 23.888 11.944C23.888 5.352 18.536 0 11.944 0ZM17.472 8.192L15.664 16.768C15.52 17.44 15.12 17.616 14.56 17.312L11.488 15.056L10.016 16.464C9.856 16.624 9.712 16.768 9.376 16.768L9.6 13.632L15.024 8.752C15.264 8.544 14.976 8.416 14.672 8.624L8.016 12.832L4.928 11.872C4.256 11.664 4.24 11.2 5.072 10.896L16.592 6.448C17.152 6.24 17.648 6.592 17.472 8.192Z" fill="#FF8C42"/>
+                    </svg>
+                    <span>@pra_dead</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-contacts">
+            <a href="tel:+79204208262" class="footer-phone">+7 (920) 420-82-62</a>
+            <a href="mailto:info@domovoy.ru">info@domovoy.ru</a>
+            <p>г. Воронеж, ул. Примерная, д. 1</p>
+        </div>
+    </div>
+</footer>
+
+<!-- МОДАЛЬНОЕ ОКНО -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-header">
+            <h3>Заказать звонок</h3>
+            <p>Оставьте свои данные, и мы перезвоним вам в течение 15 минут!</p>
+        </div>
+        <form action="#" class="modal-form">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="Телефон" required>
+            <button type="submit" class="btn-submit">Отправить заявку</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
