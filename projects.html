@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши проекты — Домовой</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .page-content { padding: 150px 0 100px; min-height: 100vh; }
+        .back-link { display: inline-block; margin-bottom: 30px; color: var(--blue); text-decoration: none; font-weight: 600; }
+        .back-link:hover { text-decoration: underline; }
+        .page-content h1 { font-size: 48px; margin-bottom: 40px; text-transform: uppercase; text-align: center; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 40px; }
+        .project-card { text-decoration: none; color: inherit; display: block; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .project-card:hover { transform: translateY(-5px); }
+        .project-card img { width: 100%; height: 400px; object-fit: cover; }
+        .project-card h3 { padding: 20px 20px 5px; font-size: 24px; text-transform: uppercase; }
+        .project-card p { padding: 0 20px 20px; color: var(--gray); }
+        @media (max-width: 768px) { .gallery-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container page-content">
+        <a href="index.html" class="back-link">← Вернуться на главную</a>
+        <h1>Наши проекты</h1>
+        <div class="gallery-grid">
+            <a href="#" class="project-card"><img src="images/project1.jpg" alt="Скайлайт"><h3>Скайлайт</h3><p>182.2 м²</p></a>
+            <a href="#" class="project-card"><img src="images/project2.jpg" alt="Квантум"><h3>Квантум</h3><p>92.99 м²</p></a>
+            <a href="#" class="project-card"><img src="images/project3.jpg" alt="Солярис"><h3>Солярис</h3><p>140.54 м²</p></a>
+            <a href="#" class="project-card"><img src="images/hero-house.jpg" alt="Модерн"><h3>Модерн</h3><p>210 м²</p></a>
+        </div>
+    </div>
+</body>
+</html>
