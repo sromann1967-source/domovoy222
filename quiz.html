@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос — Домовой</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <style>
+        .quiz-page { min-height: 100vh; background: url('images/quiz-bg.jpg') center/cover fixed; position: relative; display: flex; align-items: center; padding: 100px 20px; }
+        .quiz-overlay { position: absolute; inset: 0; background: rgba(17, 42, 72, 0.85); }
+        .quiz-container { position: relative; z-index: 2; max-width: 800px; width: 100%; margin: 0 auto; color: #fff; }
+        .back-link { position: absolute; top: 30px; left: 30px; z-index: 10; color: #fff; text-decoration: none; font-size: 16px; background: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 30px; transition: background 0.3s; }
+        .back-link:hover { background: #000; }
+        .quiz-step { display: none; }
+        .quiz-step.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .quiz-question { font-size: 32px; margin-bottom: 40px; text-align: center; font-family: var(--font-head); }
+        .quiz-options { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .quiz-option { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); padding: 20px 40px; border-radius: 8px; cursor: pointer; font-size: 18px; transition: 0.3s; color: #fff; text-align: center; flex: 1 1 200px; }
+        .quiz-option:hover { background: var(--orange); border-color: var(--orange); }
+        .progress { width: 100%; height: 4px; background: rgba(255,255,255,0.2); margin-bottom: 30px; border-radius: 2px; }
+        .progress-fill { height: 100%; background: var(--orange); width: 25%; transition: width 0.3s; border-radius: 2px; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Вернуться на главную</a>
+    <div class="quiz-page">
+        <div class="quiz-overlay"></div>
+        <div class="container quiz-container">
+            <div class="progress"><div class="progress-fill" id="progressBar"></div></div>
+            
+            <form id="quizForm">
+                <div class="quiz-step active" data-step="1">
+                    <h3 class="quiz-question">Какой дом вы хотите построить?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="nextStep()">Одноэтажный</div>
+                        <div class="quiz-option" onclick="nextStep()">Двухэтажный</div>
+                        <div class="quiz-option" onclick="nextStep()">С гаражом</div>
+                        <div class="quiz-option" onclick="nextStep()">Сложной архитектуры</div>
+                    </div>
+                </div>
+                <div class="quiz-step" data-step="2">
+                    <h3 class="quiz-question">Из какого материала планируете строиться?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="nextStep()">Кирпич</div>
+                        <div class="quiz-option" onclick="nextStep()">Газоблок</div>
+                        <div class="quiz-option" onclick="nextStep()">Брус / Дерево</div>
+                        <div class="quiz-option" onclick="nextStep()">Каркас</div>
+                    </div>
+                </div>
+                <div class="quiz-step" data-step="3">
+                    <h3 class="quiz-question">На какую площадь планируете строительство?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="nextStep()">До 100 м²</div>
+                        <div class="quiz-option" onclick="nextStep()">100 – 150 м²</div>
+                        <div class="quiz-option" onclick="nextStep()">150 – 200 м²</div>
+                        <div class="quiz-option" onclick="nextStep()">Более 200 м²</div>
+                    </div>
+                </div>
+                <div class="quiz-step" data-step="4">
+                    <h3 class="quiz-question">Спасибо! Оставьте контакты для расчета</h3>
+                    <div class="quiz-options" style="flex-direction: column; max-width: 400px; margin: 0 auto;">
+                        <input type="text" placeholder="Ваше имя" style="padding: 15px; border-radius: 8px; border: none; margin-bottom: 15px; font-size: 16px;">
+                        <input type="tel" placeholder="Ваш телефон" style="padding: 15px; border-radius: 8px; border: none; margin-bottom: 15px; font-size: 16px;">
+                        <button type="button" class="btn-submit-hero" style="margin-top: 10px;">Получить смету</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        let currentStep = 1;
+        const totalSteps = 4;
+        function nextStep() {
+            document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
+            currentStep++;
+            if (currentStep <= totalSteps) {
+                document.querySelector(`.quiz-step[data-step="${currentStep}"]`).classList.add('active');
+                document.getElementById('progressBar').style.width = `${(currentStep / totalSteps) * 100}%`;
+            }
+        }
+    </script>
+</body>
+</html>
